@@ -1,3 +1,5 @@
+const rowElem = document.querySelector(".row")
+
 let gridString = "";
 let result;
 for (let i = 1; i <= 100; i++){
@@ -19,7 +21,10 @@ else if (i % 5 === 0) {
 else {
     result = i;
 }
-console.log(i, result)
+console.log(i, result)  
 
+gridString += `<div class="square ${result}">${result}</div>`
     
 };
+
+rowElem.innerHTML = gridString;
